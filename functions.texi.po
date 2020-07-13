@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 26.1\n"
 "POT-Creation-Date: 2020-07-13 15:14+0900\n"
-"PO-Revision-Date: 2020-06-21 17:06+0900\n"
+"PO-Revision-Date: 2020-07-14 00:30+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -247,17 +247,14 @@ msgstr "argument"
 
 #. type: cindex
 #: original_texis/functions.texi:41
-#, fuzzy, no-wrap
-#| msgid "byte-code function"
+#, no-wrap
 msgid "pure function"
-msgstr "byte-code function"
+msgstr "pure function"
 
 #. type: Plain text
 #: original_texis/functions.texi:51
-#, fuzzy
-#| msgid "In a general sense, a function is a rule for carrying out a computation given input values called @dfn{arguments}.  The result of the computation is called the @dfn{value} or @dfn{return value} of the function.  The computation can also have side effects, such as lasting changes in the values of variables or the contents of data structures."
 msgid "In a general sense, a function is a rule for carrying out a computation given input values called @dfn{arguments}.  The result of the computation is called the @dfn{value} or @dfn{return value} of the function.  The computation can also have side effects, such as lasting changes in the values of variables or the contents of data structures (@pxref{Definition of side effect}).  A @dfn{pure function} is a function which, in addition to having no side effects, always returns the same value for the same combination of arguments, regardless of external factors such as machine type or system state."
-msgstr "一般的な意味では、関数とは@dfn{引数(arguments)}と呼ばれる与えられた入力値の計算を担うルールです。計算の結果は、その関数の@dfn{値(value)}、または@dfn{return値(return value)}と呼ばれます。計算は、変数の値やデータ構造の内容を変更する等の副作用をもつこともできます。"
+msgstr "一般的な意味では関数とは@dfn{引数(arguments)}と呼ばれる与えられた入力値の計算を担うルールです。計算の結果は関数の@dfn{値(value)}、または@dfn{return値(return value)}と呼ばれます。計算は変数の値やデータ構造の内容を変更する等の副作用をもつこともできます(@ref{Definition of side effect}を参照)。@dfn{純粋関数(pure function)}とは、それらに加えて副作用をもたず、機種別やシステム状態のような外部要因とは無関係に同じ条件の引数にたいして常に同一の値をリターンする関数のことです。"
 
 #. type: Plain text
 #: original_texis/functions.texi:61
@@ -3774,6 +3771,7 @@ msgstr ""
 "@code{while}, and @code{unwind-protect}], if all its arguments are\n"
 "safe.\n"
 
+# grouped by @ignore.
 #. type: itemize
 #: original_texis/functions.texi:2373
 #, no-wrap
@@ -3783,6 +3781,10 @@ msgid ""
 "@code{let*}), if all args are safe and the symbols to be bound are not\n"
 "explicitly risky (@pxref{File Local Variables}).\n"
 msgstr ""
+"A form that creates temporary bindings (@code{condition-case},\n"
+"@code{dolist}, @code{dotimes}, @code{lambda}, @code{let}, or\n"
+"@code{let*}), if all args are safe and the symbols to be bound are not\n"
+"explicitly risky (@pxref{File Local Variables}).\n"
 
 # grouped by @ignore.
 #. type: itemize
