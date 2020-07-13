@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 26.1-\n"
 "POT-Creation-Date: 2020-07-13 15:16+0900\n"
-"PO-Revision-Date: 2020-06-21 01:36+0900\n"
+"PO-Revision-Date: 2020-07-13 22:50+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -3150,7 +3150,7 @@ msgstr "ある変数にたいして@code{safe-local-variable}プロパティー�
 #. type: Plain text
 #: original_texis/variables.texi:1854
 msgid "If you want to define @code{safe-local-variable} properties for variables defined in C source code, add the names and the properties of those variables to the list in the ``Safe local variables'' section of @file{files.el}."
-msgstr ""
+msgstr "Cソースコード内で定義された変数に@code{safe-local-variable}プロパティを定義したければ、それらの変数の名前とプロパティを@file{files.el}のセクション``Safe local variables''のリストに追加してください。"
 
 #. type: cindex
 #: original_texis/variables.texi:1855
@@ -3327,10 +3327,8 @@ msgstr "dir-locals-set-class-variables class variables"
 
 #. type: defun
 #: original_texis/variables.texi:2024
-#, fuzzy
-#| msgid "This function defines a set of variable settings for the named @var{class}, which is a symbol.  You can later assign the class to one or more directories, and Emacs will apply those variable settings to all files in those directories.  The list in @var{variables} can be of one of the two forms: @code{(@var{major-mode} . @var{alist})} or @code{(@var{directory} . @var{list})}.  With the first form, if the file's buffer turns on a mode that is derived from @var{major-mode}, then the all the variables in the associated @var{alist} are applied; @var{alist} should be of the form @code{(@var{name} . @var{value})}.  A special value @code{nil} for @var{major-mode} means the settings are applicable to any mode.  In @var{alist}, you can use a special @var{name}: @code{subdirs}.  If the associated value is @code{nil}, the alist is only applied to files in the relevant directory, not to those in any subdirectories."
 msgid "This function defines a set of variable settings for the named @var{class}, which is a symbol.  You can later assign the class to one or more directories, and Emacs will apply those variable settings to all files in those directories.  The list in @var{variables} can be of one of the two forms: @code{(@var{major-mode} . @var{alist})} or @code{(@var{directory} . @var{list})}.  With the first form, if the file's buffer turns on a mode that is derived from @var{major-mode}, then all the variables in the associated @var{alist} are applied; @var{alist} should be of the form @code{(@var{name} . @var{value})}.  A special value @code{nil} for @var{major-mode} means the settings are applicable to any mode.  In @var{alist}, you can use a special @var{name}: @code{subdirs}.  If the associated value is @code{nil}, the alist is only applied to files in the relevant directory, not to those in any subdirectories."
-msgstr "この関数は、@var{class}という名前がつけられたシンボルにたいして、一連の変数セッティングを定義します。その後このクラスを1つ以上のディレクトリーに割り当てることができ、するとEmacsはこれらの変数セッティングを、それらのディレクトリー内のすべてのファイルに適用します。@var{variables}内のリストは、2つの形式 --- @code{(@var{major-mode} . @var{alist})}または@code{(@var{directory} . @var{list})} --- のうち1つをもつことができます。1番目の形式では、そのファイルのバッファーが@var{major-mode}を継承するモードに切り替わるときに、連想リスト@var{alist}内のすべての変数が適用されます。@var{alist}は、@code{(@var{name} . @var{value})}という形式です。@var{major-mode}にたいする特別な値@code{nil}は、そのセッティングが任意のモードに適用できることを意味します。@var{alist}内では、特別な@var{name}として、@code{subdirs}を使用することができます。連想値が@code{nil}の場合、alistは関連するディレクトリー内のファイルだけに適用され、それらのサブディレクトリーには適用されません。"
+msgstr "この関数は@var{class}という名前がつけられたシンボルにたいして一連の変数セッティングを定義する。その後はこのクラスを1つ以上のディレクトリーに割り当てることができるので、Emacsはこれらの変数セッティングをディレクトリー内のすべてのファイルに適用する。@var{variables}内のリストは2つの形式 --- @code{(@var{major-mode} . @var{alist})}、または@code{(@var{directory} . @var{list})} --- のうちのいずれかをもつことができる。1番目の形式ではそのファイルのバッファーが@var{major-mode}を継承するモードに切り替わるときに、連想リスト@var{alist}内のすべての変数が適用される。@var{alist}は@code{(@var{name} . @var{value})}という形式。@var{major-mode}にたいする特別な値@code{nil}は、そのセッティングが任意のモードに適用できることを意味する。@var{alist}内では特別な@var{name}として@code{subdirs}を使用することができる。連想値が@code{nil}ならalistは関連するディレクトリー内のファイルだけに適用されて、それらのサブディレクトリーには適用されない。"
 
 #. type: defun
 #: original_texis/variables.texi:2029
