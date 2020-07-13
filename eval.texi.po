@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 26.1\n"
 "POT-Creation-Date: 2020-07-13 15:14+0900\n"
-"PO-Revision-Date: 2020-06-15 17:44+0900\n"
+"PO-Revision-Date: 2020-07-13 21:49+0900\n"
 "Last-Translator: Takeshi Ayanokoji <takeshi.ayanokoji@gmail.com>\n"
 "Language-Team: Japanese <takeshi.ayanokoji@gmail.com>\n"
 "Language: ja\n"
@@ -182,10 +182,8 @@ msgstr "side effect"
 
 #. type: anchor{#1}
 #: original_texis/eval.texi:93
-#, fuzzy
-#| msgid "Definition of indirect-function"
 msgid "Definition of side effect"
-msgstr "Definition of indirect-function"
+msgstr "Definition of side effect"
 
 #. type: Plain text
 #: original_texis/eval.texi:93
@@ -410,13 +408,13 @@ msgstr "symbol evaluation"
 #: original_texis/eval.texi:184
 #, no-wrap
 msgid "symbol forms"
-msgstr ""
+msgstr "symbol forms"
 
 #. type: cindex
 #: original_texis/eval.texi:185
 #, no-wrap
 msgid "forms, symbol"
-msgstr ""
+msgstr "forms, symbol"
 
 #. type: Plain text
 #: original_texis/eval.texi:191
@@ -479,7 +477,7 @@ msgstr "list form evaluation"
 #: original_texis/eval.texi:222
 #, no-wrap
 msgid "forms, list"
-msgstr ""
+msgstr "forms, list"
 
 #. type: Plain text
 #: original_texis/eval.texi:229
@@ -713,10 +711,9 @@ msgstr "function call"
 
 #. type: cindex
 #: original_texis/eval.texi:357
-#, fuzzy, no-wrap
-#| msgid "function call"
+#, no-wrap
 msgid "forms, function call"
-msgstr "function call"
+msgstr "forms, function call"
 
 #. type: Plain text
 #: original_texis/eval.texi:363
@@ -750,7 +747,7 @@ msgstr "macro call evaluation"
 #: original_texis/eval.texi:381
 #, no-wrap
 msgid "forms, macro call"
-msgstr ""
+msgstr "forms, macro call"
 
 #. type: Plain text
 #: original_texis/eval.texi:392
@@ -813,7 +810,7 @@ msgstr "special forms"
 #: original_texis/eval.texi:428
 #, no-wrap
 msgid "forms, special"
-msgstr ""
+msgstr "forms, special"
 
 #. type: cindex
 #: original_texis/eval.texi:429
@@ -1101,7 +1098,7 @@ msgstr "@dfn{オートロード(autoload)}機能により、まだ関数定義�
 #: original_texis/eval.texi:550
 #, no-wrap
 msgid "forms, quote"
-msgstr ""
+msgstr "forms, quote"
 
 #. type: Plain text
 #: original_texis/eval.texi:557
@@ -1232,10 +1229,9 @@ msgstr "`"
 
 #. type: cindex
 #: original_texis/eval.texi:610
-#, fuzzy, no-wrap
-#| msgid "Backquote"
+#, no-wrap
 msgid "forms, backquote"
-msgstr "Backquote"
+msgstr "forms, backquote"
 
 #. type: Plain text
 #: original_texis/eval.texi:615
