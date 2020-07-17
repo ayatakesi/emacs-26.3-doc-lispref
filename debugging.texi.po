@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 26.1\n"
 "POT-Creation-Date: 2020-07-13 15:14+0900\n"
-"PO-Revision-Date: 2020-06-21 20:07+0900\n"
+"PO-Revision-Date: 2020-07-17 13:57+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1392,10 +1392,8 @@ msgstr "Lispリーダーは無効な構文(invalid syntax)について報告は�
 
 #. type: Plain text
 #: original_texis/debugging.texi:803
-#, fuzzy
-#| msgid "If the problem is not simply an imbalance of parentheses, a useful technique is to try @kbd{C-M-e} at the beginning of each defun, and see if it goes to the place where that defun appears to end.  If it does not, there is a problem in that defun."
 msgid "If the problem is not simply an imbalance of parentheses, a useful technique is to try @kbd{C-M-e} (@code{end-of-defun}, @pxref{Moving by Defuns,,,emacs, The GNU Emacs Manual}) at the beginning of each defun, and see if it goes to the place where that defun appears to end.  If it does not, there is a problem in that defun."
-msgstr "問題が単なるカッコの不一致でない場合の便利なテクニックは、各defunの先頭で@kbd{C-M-e}とタイプして、そのdefunの最後と思われる箇所に移動するか確認する方法です。もし移動しなければ、問題はそのdefunの内部にあります。"
+msgstr "問題が単なるカッコの不一致でない場合の便利なテクニックは、各defunの先頭で@kbd{C-M-e} ( @code{end-of-defun}。@ref{Moving by Defuns,,,emacs, The GNU Emacs Manual}を参照)とタイプして、そのdefunの最後と思われる箇所に移動するか確認する方法です。もし移動しなければ、問題はそのdefunの内部にあります。"
 
 #. type: cindex
 #: original_texis/debugging.texi:804
@@ -1450,31 +1448,23 @@ msgstr "excess open parentheses"
 
 #. type: Plain text
 #: original_texis/debugging.texi:825
-#, fuzzy
-#| msgid "The first step is to find the defun that is unbalanced.  If there is an excess open parenthesis, the way to do this is to go to the end of the file and type @kbd{C-u C-M-u}.  This will move you to the beginning of the first defun that is unbalanced."
 msgid "The first step is to find the defun that is unbalanced.  If there is an excess open parenthesis, the way to do this is to go to the end of the file and type @kbd{C-u C-M-u} (@code{backward-up-list}, @pxref{Moving by Parens,,,emacs, The GNU Emacs Manual}).  This will move you to the beginning of the first defun that is unbalanced."
-msgstr "カッコがマッチしないdefunを探すのが、最初のステップです。過剰な開カッコが存在する場合は、ファイルの終端に移動して@kbd{C-u C-M-u}とタイプします。これにより、カッコがマッチしない最初のdefunの先頭に移動するでしょう。"
+msgstr "カッコがマッチしないdefunを探すのが、最初のステップです。過剰な開カッコが存在する場合は、ファイルの終端に移動して@kbd{C-u C-M-u} ( @code{backward-up-list}。@ref{Moving by Parens,,,emacs, The GNU Emacs Manual}を参照)とタイプします。これにより、カッコがマッチしない最初のdefunの先頭に移動するでしょう。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:833
-#, fuzzy
-#| msgid "The next step is to determine precisely what is wrong.  There is no way to be sure of this except by studying the program, but often the existing indentation is a clue to where the parentheses should have been.  The easiest way to use this clue is to reindent with @kbd{C-M-q} and see what moves.  @strong{But don't do this yet!} Keep reading, first."
 msgid "The next step is to determine precisely what is wrong.  There is no way to be sure of this except by studying the program, but often the existing indentation is a clue to where the parentheses should have been.  The easiest way to use this clue is to reindent with @kbd{C-M-q} (@code{indent-pp-sexp}, @pxref{Multi-line Indent,,,emacs, The GNU Emacs Manual}) and see what moves.  @strong{But don't do this yet!} Keep reading, first."
-msgstr "何が間違っているのか正確に判断するのが次のステップです。これを確実に行なうには、そのプログラムを詳しく調べる以外に方法はありませんが、カッコがあるべき箇所を探すのに、既存のインデントが手掛かりになることが多々あります。@kbd{C-M-q}で再インデントして何が移動されるか確認するのが、この手掛かりを使用するもっとも簡単な方法です。@strong{しかし、行うのはちょっと待ってください!} まず続きを読んでからにしましょう。"
+msgstr "何が間違っているのか正確に判断するのが次のステップです。これを確実に行なうにはプログラムを詳しく調べる以外に方法はありませんが、カッコがあるべき箇所を探すのに既存のインデントが手掛かりになることが多々あります。@kbd{C-M-q} (@code{indent-pp-sexp}。@ref{Multi-line Indent,,,emacs, The GNU Emacs Manual}を参照)で再インデントして何が移動されるか確認するのが、この手掛かりを使用するもっとも簡単な方法です。@strong{しかし、行うのはちょっと待ってください!} まず続きを読んでからにしましょう。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:839
-#, fuzzy
-#| msgid "Before you do this, make sure the defun has enough close parentheses.  Otherwise, @kbd{C-M-q} will get an error, or will reindent all the rest of the file until the end.  So move to the end of the defun and insert a close parenthesis there.  Don't use @kbd{C-M-e} to move there, since that too will fail to work until the defun is balanced."
 msgid "Before you do this, make sure the defun has enough close parentheses.  Otherwise, @kbd{C-M-q} will get an error, or will reindent all the rest of the file until the end.  So move to the end of the defun and insert a close parenthesis there.  Don't use @kbd{C-M-e} (@code{end-of-defun}) to move there, since that too will fail to work until the defun is balanced."
-msgstr "これを行なう前に、defunに十分な閉カッコがあるか確認します。十分な閉カッコがない場合、@kbd{C-M-q}がエラーとなるか、そのdefunからファイル終端までの残りすべてが再インデントされます。その場合はdefunの最後に移動して、そこに閉カッコを挿入します。そのdefunのカッコの釣り合いがとれるまでは、defunの最後に移動するのに@kbd{C-M-e}は使用できません(失敗するでしょう)。"
+msgstr "これを行なう前にdefunに十分な閉カッコがあるか確認します。十分な閉カッコがなければ @kbd{C-M-q}がエラーとなるか、そのdefunからファイル終端までの残りすべてが再インデントされます。その場合にはdefunの最後に移動して、そこに閉カッコを挿入します。そのdefunのカッコの釣り合いがとれるまでは、defunの最後に移動するのに@kbd{C-M-e} (@code{end-of-defun})は使用できません(失敗する)。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:848
-#, fuzzy
-#| msgid "Now you can go to the beginning of the defun and type @kbd{C-M-q}.  Usually all the lines from a certain point to the end of the function will shift to the right.  There is probably a missing close parenthesis, or a superfluous open parenthesis, near that point.  (However, don't assume this is true; study the code to make sure.)  Once you have found the discrepancy, undo the @kbd{C-M-q} with @kbd{C-_}, since the old indentation is probably appropriate to the intended parentheses."
 msgid "Now you can go to the beginning of the defun and type @kbd{C-M-q}.  Usually all the lines from a certain point to the end of the function will shift to the right.  There is probably a missing close parenthesis, or a superfluous open parenthesis, near that point.  (However, don't assume this is true; study the code to make sure.)  Once you have found the discrepancy, undo the @kbd{C-M-q} with @kbd{C-_} (@code{undo}), since the old indentation is probably appropriate to the intended parentheses."
-msgstr "これでdefunの先頭に移動して@kbd{C-M-q}とタイプすることができます。通常は、一定のポイントからその関数の最後までのすべての行が、右へとシフトされるでしょう。これはおそらくそのポイント付近で閉カッコが欠落しているか、不要な開カッコがあります。(しかし、これを真実と仮定せず、コードを詳しく調べてください。) 不一致箇所が見つけたら、元のインデントはおそらく意図されたカッコに適しているはずなので、@kbd{C-_}で@kbd{C-M-q}をアンドゥしてください。"
+msgstr "これでdefunの先頭に移動して@kbd{C-M-q}とタイプすることができます。通常は一定のポイントからその関数の最後までのすべての行が、右へとシフトされるでしょう。これはおそらくそのポイント付近で閉カッコが欠落していたり不要な開カッコがあります(しかしこれを真実と仮定せずコードを詳しく調べること)。不一致箇所を見つけたら、元のインデントはおそらく意図されたカッコに適しているはずなので、@kbd{C-_} (@code{undo})で@kbd{C-M-q}をアンドゥしてください。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:853
@@ -1495,24 +1485,18 @@ msgstr "excess close parentheses"
 
 #. type: Plain text
 #: original_texis/debugging.texi:862
-#, fuzzy
-#| msgid "To deal with an excess close parenthesis, first go to the beginning of the file, then type @kbd{C-u -1 C-M-u} to find the end of the first unbalanced defun."
 msgid "To deal with an excess close parenthesis, first go to the beginning of the file, then type @kbd{C-u -1 C-M-u} (@code{backward-up-list} with an argument of @minus{}1) to find the end of the first unbalanced defun."
-msgstr "過剰な閉カッコへの対処は、まずファイルの先頭に移動してから、カッコのマッチしないdefunを探すために@kbd{C-u -1 C-M-u}をタイプします。"
+msgstr "過剰な閉カッコへの対処は、まずファイルの先頭に移動してからカッコのマッチしないdefunを探すために@kbd{C-u -1 C-M-u} (引数@minus{}1で@code{backward-up-list})をタイプします。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:868
-#, fuzzy
-#| msgid "Then find the actual matching close parenthesis by typing @kbd{C-M-f} at the beginning of that defun.  This will leave you somewhere short of the place where the defun ought to end.  It is possible that you will find a spurious close parenthesis in that vicinity."
 msgid "Then find the actual matching close parenthesis by typing @kbd{C-M-f} (@code{forward-sexp}, @pxref{Expressions,,,emacs, The GNU Emacs Manual})  at the beginning of that defun.  This will leave you somewhere short of the place where the defun ought to end.  It is possible that you will find a spurious close parenthesis in that vicinity."
-msgstr "それから、そのdefunの先頭で@kbd{C-M-f}をタイプして、実際にマッチする閉カッコを探します。これにより、そのdefunの終端より幾分手前の箇所に移動するでしょう。その付近に間違った閉カッコが見つかるでしょう。"
+msgstr "それからdefunの先頭で@kbd{C-M-f} (@code{forward-sexp}。@ref{Expressions,,,emacs, The GNU Emacs Manual}を参照)をタイプして、実際にマッチする閉カッコを探します。これによりdefunの終端より幾分手前の箇所に移動するでしょう。その付近に間違った閉カッコが見つかるはずです。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:877
-#, fuzzy
-#| msgid "If you don't see a problem at that point, the next thing to do is to type @kbd{C-M-q} at the beginning of the defun.  A range of lines will probably shift left; if so, the missing open parenthesis or spurious close parenthesis is probably near the first of those lines.  (However, don't assume this is true; study the code to make sure.)  Once you have found the discrepancy, undo the @kbd{C-M-q} with @kbd{C-_}, since the old indentation is probably appropriate to the intended parentheses."
 msgid "If you don't see a problem at that point, the next thing to do is to type @kbd{C-M-q} (@code{indent-pp-sexp}) at the beginning of the defun.  A range of lines will probably shift left; if so, the missing open parenthesis or spurious close parenthesis is probably near the first of those lines.  (However, don't assume this is true; study the code to make sure.)  Once you have found the discrepancy, undo the @kbd{C-M-q} with @kbd{C-_} (@code{undo}), since the old indentation is probably appropriate to the intended parentheses."
-msgstr "そのポイントに問題が見つからない場合には、そのdefunの先頭で@kbd{C-M-q}をタイプするのが次のステップです。ある行範囲はおそらく左へシフトするでしょう。その場合、欠落している開カッコまたは間違った閉カッコは、おそらくそれらの行の1行目の近くにあるでしょう。 (しかし、これを真実と仮定せず、コードを詳しく調べてください。)不一致箇所が見つけたら、元のインデントはおそらく意図されたカッコに適しているはずなので、@kbd{C-_}で@kbd{C-M-q}をアンドゥしてください。"
+msgstr "そのポイントに問題が見つからない場合には、そのdefunの先頭で@kbd{C-M-q} (@code{indent-pp-sexp})をタイプするのが次のステップです。ある行範囲はおそらく左へシフトするでしょう。その場合には欠落している開カッコや間違った閉カッコは、おそらくそれらの行の1行目の近くにあるでしょう(しかしこれを真実と仮定せずコードを詳しく調べること)。不一致箇所が見つけたら、元のインデントはおそらく意図されたカッコに適しているはずなので@kbd{C-_} (@code{undo})で@kbd{C-M-q}をアンドゥしてください。"
 
 #. type: Plain text
 #: original_texis/debugging.texi:882
