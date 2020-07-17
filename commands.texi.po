@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 26.1\n"
 "POT-Creation-Date: 2020-07-13 15:14+0900\n"
-"PO-Revision-Date: 2020-06-22 15:45+0900\n"
+"PO-Revision-Date: 2020-07-18 01:13+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -2756,10 +2756,8 @@ msgstr "object"
 
 #. type: table
 #: original_texis/commands.texi:1401
-#, fuzzy
-#| msgid "Either @code{nil} if there is no string-type text property at the click position, or a cons cell of the form (@var{string} . @var{string-pos}) if there is one:"
 msgid "Either @code{nil}, which means the click occurred on buffer text, or a cons cell of the form @w{(@var{string} . @var{string-pos})} if there is a string from a text property or an overlay at the click position."
-msgstr "クリック位置に文字列タイプのテキストプロパティが存在しない場合は@code{nil}、存在する場合は(@var{string} . @var{string-pos})形式のコンスセル:"
+msgstr "@code{nil} (バッファーテキスト上でクリックが発生したことを意味する)、クリック箇所にテキストプロパティやオーバーレイがあれば@w{(@var{string} . @var{string-pos})}という形式のコンスセル。"
 
 #. type: var{#1}
 #: original_texis/commands.texi:1403
@@ -2814,7 +2812,7 @@ msgstr "image"
 #. type: table
 #: original_texis/commands.texi:1434
 msgid "If there is an image at the click location, this is the image object as returned by @code{find-image} (@pxref{Defining Images}); otherwise this is @code{nil}."
-msgstr ""
+msgstr "クリック箇所にイメージがあれば@code{find-image}がリターンするようなイメージオブジェクト(@ref{Defining Images}を参照)、それ以外は@code{nil}。"
 
 #. type: item
 #: original_texis/commands.texi:1435
@@ -2824,10 +2822,8 @@ msgstr "@var{dx}, @var{dy}"
 
 #. type: table
 #: original_texis/commands.texi:1440
-#, fuzzy
-#| msgid "These are the pixel coordinates of the click, relative to the top left corner of @var{object}, which is @code{(0 . 0)}.  If @var{object} is @code{nil}, the coordinates are relative to the top left corner of the character glyph clicked on."
 msgid "These are the pixel coordinates of the click, relative to the top left corner of @var{object}, which is @code{(0 . 0)}.  If @var{object} is @code{nil}, which stands for a buffer, the coordinates are relative to the top left corner of the character glyph clicked on."
-msgstr "これらは@var{object}の左上隅@code{(0 . 0)}からの相対的ピクセル座標である。@var{object}が@code{nil}の場合は、クリックされた文字グリフの左上隅からの相対座標である。"
+msgstr "これらは@var{object}の左上隅@code{(0 . 0)}からの相対的ピクセル座標。@var{object}が@code{nil} (バッファーを意味する)の場合には、クリックされた文字グリフの左上隅からの相対座標。"
 
 #. type: item
 #: original_texis/commands.texi:1441
@@ -3786,10 +3782,8 @@ msgstr "posnp object"
 
 #. type: defun
 #: original_texis/commands.texi:2043
-#, fuzzy
-#| msgid "This function returns non-@code{nil} if @var{object} is a mouse position list, in either of the formats documented in @ref{Click Events}); and @code{nil} otherwise."
 msgid "This function returns non-@code{nil} if @var{object} is a mouse position list, in the format documented in @ref{Click Events}); and @code{nil} otherwise."
-msgstr "この関数は@var{object}が(@ref{Click Events}に記述されたいずれかのフォーマットの)マウス位置リストの場合は非@code{nil}、それ以外では@code{nil}をリターンする。"
+msgstr "この関数は@var{object}が(@ref{Click Events}に記述されたフォーマットの)マウス位置リストなら非@code{nil}、それ以外では@code{nil}をリターンする。"
 
 #. type: cindex
 #: original_texis/commands.texi:2045
@@ -3843,10 +3837,8 @@ msgstr "posn-x-y position"
 
 #. type: defun
 #: original_texis/commands.texi:2072
-#, fuzzy
-#| msgid "Return the pixel-based x and y coordinates in @var{position}, as a cons cell @code{(@var{x} . @var{y})}.  These coordinates are relative to the window given by @code{posn-window}."
 msgid "Return the pixel-based x and y coordinates in @var{position}, as a cons cell @w{@code{(@var{x} . @var{y})}}.  These coordinates are relative to the window given by @code{posn-window}."
-msgstr "@var{position}内のピクセル単位のxy座標を、コンスセル@code{(@var{x} . @var{y})}でリターンする。これらは@code{posn-window}により与えられるウィンドウにたいする相対座標である。"
+msgstr "@var{position}内のピクセル単位のxy座標を、コンスセル@w{@code{(@var{x} . @var{y})}}でリターンする。これらは@code{posn-window}により与えられるウィンドウにたいする相対座標である。"
 
 #. type: defun
 #: original_texis/commands.texi:2075
@@ -3883,10 +3875,8 @@ msgstr "posn-col-row position"
 
 #. type: defun
 #: original_texis/commands.texi:2097
-#, fuzzy
-#| msgid "This function returns a cons cell @code{(@var{col} .  @var{row})}, containing the estimated column and row corresponding to buffer position in @var{position}.  The return value is given in units of the frame's default character width and default line height (including spacing), as computed from the @var{x} and @var{y} values corresponding to @var{position}.  (So, if the actual characters have non-default sizes, the actual row and column may differ from these computed values.)"
 msgid "This function returns a cons cell @w{@code{(@var{col} .  @var{row})}}, containing the estimated column and row corresponding to buffer position described by @var{position}.  The return value is given in units of the frame's default character width and default line height (including spacing), as computed from the @var{x} and @var{y} values corresponding to @var{position}.  (So, if the actual characters have non-default sizes, the actual row and column may differ from these computed values.)"
-msgstr "この関数は、@var{position}内のバッファー位置にたいして推定される列と行を含むコンスセル@code{(@var{col} . @var{row})}をリターンする。リターン値は、@var{position}にたいする@var{x}と@var{y}の値より計算され、そのフレームのデフォルト文字幅とデフォルト行高(行間スペースを含む)の単位で与えられる(そのため、実際の文字サイズが非デフォルト値の場合には、実際の行と列は、これらの計算された値とは異なるかもしれない)。"
+msgstr "この関数は@var{position}で記述されるのバッファー位置で推定される列と行を含むコンスセル@w{@code{(@var{col} .  @var{row})}}をリターンする。リターン値は@var{position}にたいする@var{x}と@var{y}の値より計算され、そのフレームのデフォルト文字幅とデフォルト行高(行間スペースを含む)の単位で与えられる(そのため実際の文字サイズが非デフォルト値の場合には、実際の行と列は計算された値とは異なるかもしれない)。"
 
 #. type: defun
 #: original_texis/commands.texi:2101
@@ -3901,10 +3891,8 @@ msgstr "posn-actual-col-row position"
 
 #. type: defun
 #: original_texis/commands.texi:2110
-#, fuzzy
-#| msgid "Return the actual row and column in @var{position}, as a cons cell @code{(@var{col} . @var{row})}.  The values are the actual row and column numbers in the window given by @var{position}.  @xref{Click Events}, for details.  The function returns @code{nil} if @var{position} does not include actual position values; in that case @code{posn-col-row} can be used to get approximate values."
 msgid "Return the actual row and column in @var{position}, as a cons cell @w{@code{(@var{col} . @var{row})}}.  The values are the actual row and column numbers in the window given by @var{position}.  @xref{Click Events}, for details.  The function returns @code{nil} if @var{position} does not include actual position values; in that case @code{posn-col-row} can be used to get approximate values."
-msgstr "@var{position}内の実際の行と列を、コンスセル@code{(@var{col} . @var{row})}でリターンする。値は@var{position}与えられるウィンドウの実際の行と列である。@ref{Click Events}を参照のこと。@var{position}が実際のポジション値を含まない場合、この関数は@code{nil}をリターンする。この場合、おおよその値を取得するために@code{posn-col-row}を使用できる。"
+msgstr "@var{position}内の実際の行と列をコンスセル@w{@code{(@var{col} . @var{row})}}でリターンする。値は@var{position}与えられるウィンドウの実際の行と列。@ref{Click Events}を参照のこと。@var{position}が実際のポジション値を含まなければ、この関数は@code{nil}をリターンする。この場合にはおおよその値を取得するために@code{posn-col-row}を使用できる。"
 
 #. type: defun
 #: original_texis/commands.texi:2115
@@ -3919,10 +3907,8 @@ msgstr "posn-string position"
 
 #. type: defun
 #: original_texis/commands.texi:2121
-#, fuzzy
-#| msgid "Return the string object in @var{position}, either @code{nil}, or a cons cell @code{(@var{string} . @var{string-pos})}."
 msgid "Return the string object described by @var{position}, either @code{nil} (which means @var{position} describes buffer text), or a cons cell @w{@code{(@var{string} . @var{string-pos})}}."
-msgstr "@var{position}内の文字列オブジェクトをを@code{nil}、またはコンスセル@code{(@var{string} . @var{string-pos})}でリターンする。"
+msgstr "@var{position}に記述された文字列オブジェクトをリターンする。@code{nil} (@var{position}がバッファーテキストを記述することを意味する)、またはコンスセル@w{@code{(@var{string} . @var{string-pos})}}のいずれか。"
 
 #. type: defun
 #: original_texis/commands.texi:2123
@@ -3932,10 +3918,8 @@ msgstr "posn-image position"
 
 #. type: defun
 #: original_texis/commands.texi:2127
-#, fuzzy
-#| msgid "Return the image object in @var{position}, either @code{nil}, or an image @code{(image ...)}."
 msgid "Return the image object in @var{position}, either @code{nil} (if there's no image at @var{position}), or an image spec @w{@code{(image @dots{})}}."
-msgstr "@var{position}内のイメージオブジェクトを@code{nil}、または@code{(image ...)}でリターンする。"
+msgstr "@var{position}にあるイメージオブジェクトをリターンする。@code{nil} (@var{position}にイメージがない)、またはイメージspec @w{@code{(image @dots{})}}のいずれか。"
 
 #. type: defun
 #: original_texis/commands.texi:2129
@@ -3945,10 +3929,8 @@ msgstr "posn-object position"
 
 #. type: defun
 #: original_texis/commands.texi:2134
-#, fuzzy
-#| msgid "Return the image or string object in @var{position}, either @code{nil}, an image @code{(image ...)}, or a cons cell @code{(@var{string} . @var{string-pos})}."
 msgid "Return the image or string object described by @var{position}, either @code{nil} (which means @var{position} describes buffer text), an image @w{@code{(image @dots{})}}, or a cons cell @w{@code{(@var{string} . @var{string-pos})}}."
-msgstr "@var{position}内のイメージオブジェクト、または文字列オブジェクトを@code{nil}、イメージ@code{(image ...)}、またはコンスセル@code{(@var{string} . @var{string-pos})}でリターンする。"
+msgstr "@var{position}により記述されるイメージオブジェクトか文字列オブジェクトをリターンする。@code{nil} (@var{position}がバッファーテキストを記述することを意味する)、イメージ@w{@code{(image @dots{})}}、またはコンスセル@w{@code{(@var{string} . @var{string-pos})}}のいずれか。"
 
 #. type: defun
 #: original_texis/commands.texi:2136
@@ -3958,10 +3940,8 @@ msgstr "posn-object-x-y position"
 
 #. type: defun
 #: original_texis/commands.texi:2142
-#, fuzzy
-#| msgid "Return the pixel-based x and y coordinates relative to the upper left corner of the object in @var{position} as a cons cell @code{(@var{dx} . @var{dy})}.  If the @var{position} is on buffer text, return the relative position of the buffer-text character closest to that position."
 msgid "Return the pixel-based x and y coordinates relative to the upper left corner of the object described by @var{position}, as a cons cell @w{@code{(@var{dx} . @var{dy})}}.  If the @var{position} describes buffer text, return the relative coordinates of the buffer-text character closest to that position."
-msgstr "@var{position}内のオブジェクトの左上隅からのピクセル単位のxy座標を、コンスセル@code{(@var{dx} . @var{dy})}でリターンする。@var{position}がバッファーテキストの場合は、その位置にもっとも近いバッファーテキストの相対位置をリターンする。"
+msgstr "@var{position}で記述されるオブジェクトの左上隅からのピクセル単位のxy座標を、コンスセル@w{@code{(@var{dx} . @var{dy})}}でリターンする。@var{position}がバッファーテキストを記述する場合には、その位置にもっとも近いバッファーテキストの相対位置をリターンする。"
 
 #. type: defun
 #: original_texis/commands.texi:2144
@@ -3971,10 +3951,8 @@ msgstr "posn-object-width-height position"
 
 #. type: defun
 #: original_texis/commands.texi:2149
-#, fuzzy
-#| msgid "Return the pixel width and height of the object in @var{position} as a cons cell @code{(@var{width} . @var{height})}.  If the @var{position} is a buffer position, return the size of the character at that position."
 msgid "Return the pixel width and height of the object described by @var{position}, as a cons cell @code{(@var{width} . @var{height})}.  If the @var{position} describes a buffer position, return the size of the character at that position."
-msgstr "@var{position}内のオブジェクトのピクセル幅とピクセル高さを、コンスセル@code{(@var{width} . @var{height})}でリターンする。@var{position}がバッファー位置の場合は、その位置の文字のサイズをリターンする。"
+msgstr "@var{position}で記述されるオブジェクトのピクセル幅とピクセル高さを、コンスセル@code{(@var{width} . @var{height})}でリターンする。@var{position}がバッファー位置を記述する場合には、その位置の文字のサイズをリターンする。"
 
 #. type: cindex
 #: original_texis/commands.texi:2151
