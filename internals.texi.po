@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-07-13 15:15+0900\n"
-"PO-Revision-Date: 2020-07-13 07:08+0900\n"
+"PO-Revision-Date: 2020-07-20 05:31+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1203,13 +1203,7 @@ msgstr "スペシャルフォームの例として以下は@file{eval.c}の@code
 
 #. type: group
 #: original_texis/internals.texi:661
-#, fuzzy, no-wrap
-#| msgid ""
-#| "DEFUN (\"or\", For, Sor, 0, UNEVALLED, 0,\n"
-#| "  doc: /* Eval args until one of them yields non-nil, then return\n"
-#| "that value.\n"
-#| "The remaining args are not evalled at all.\n"
-#| "If all args return nil, return nil.\n"
+#, no-wrap
 msgid ""
 "DEFUN (\"or\", For, Sor, 0, UNEVALLED, 0,\n"
 "       doc: /* Eval args until one of them yields non-nil,\n"
@@ -1218,8 +1212,8 @@ msgid ""
 "If all args return nil, return nil.\n"
 msgstr ""
 "DEFUN (\"or\", For, Sor, 0, UNEVALLED, 0,\n"
-"  doc: /* Eval args until one of them yields non-nil, then return\n"
-"that value.\n"
+"       doc: /* Eval args until one of them yields non-nil,\n"
+"then return that value.\n"
 "The remaining args are not evalled at all.\n"
 "If all args return nil, return nil.\n"
 
@@ -1355,20 +1349,12 @@ msgstr "interactive"
 
 #. type: table
 #: original_texis/internals.texi:737
-#, fuzzy
-#| msgid "This is an interactive specification, a string such as might be used as the argument of @code{interactive} in a Lisp function.  In the case of @code{or}, it is 0 (a null pointer), indicating that @code{or} cannot be called interactively.  A value of @code{\"\"} indicates a function that should receive no arguments when called interactively.  If the value begins with a @samp{\"(}, the string is evaluated as a Lisp form.  For example:"
 msgid "This is an interactive specification, a string such as might be used as the argument of @code{interactive} in a Lisp function (@pxref{Using Interactive}).  In the case of @code{or}, it is @code{0} (a null pointer), indicating that @code{or} cannot be called interactively.  A value of @code{\"\"} indicates a function that should receive no arguments when called interactively.  If the value begins with a @samp{\"(}, the string is evaluated as a Lisp form.  For example:"
-msgstr "これはLisp関数で@code{interactive}の引数として使用されるような、インタラクティブ仕様である(文字列)。@code{or}の場合は0(nullポインター)で、それは@code{or}がインタラクティブに呼び出せないことを示す。値@code{\"\"}は、インタラクティブに呼び出し時、関数が引き受けるべきではないことを示す。値が@samp{\"(}で始まる場合、その文字列はLispフォームとして評価される。たとえば:"
+msgstr "これはLisp関数で@code{interactive}の引数として使用されるようなインタラクティブ仕様(文字列)である(@ref{Using Interactive}を参照)。@code{or}の場合は@code{0} (nullポインター)であり@code{or}がインタラクティブに呼び出せないことを示す。値@code{\"\"}はインタラクティブに呼び出し時に、関数が引数を受け取るべきではないことを示す。値が@samp{\"(}で始まる場合には、その文字列はLispフォームとして評価される。たとえば:"
 
 #. type: group
 #: original_texis/internals.texi:745
-#, fuzzy, no-wrap
-#| msgid ""
-#| "DEFUN (\"foo\", Ffoo, Sfoo, 0, UNEVALLED,\n"
-#| "       \"(list (read-char-by-name \\\"Insert character: \\\")\\\n"
-#| "              (prefix-numeric-value current-prefix-arg)\\\n"
-#| "              t))\",\n"
-#| "  doc: /* @dots{} /*)\n"
+#, no-wrap
 msgid ""
 "DEFUN (\"foo\", Ffoo, Sfoo, 0, 3,\n"
 "       \"(list (read-char-by-name \\\"Insert character: \\\")\\\n"
@@ -1376,11 +1362,11 @@ msgid ""
 "              t)\",\n"
 "       doc: /* @dots{} */)\n"
 msgstr ""
-"DEFUN (\"foo\", Ffoo, Sfoo, 0, UNEVALLED,\n"
+"DEFUN (\"foo\", Ffoo, Sfoo, 0, 3,\n"
 "       \"(list (read-char-by-name \\\"Insert character: \\\")\\\n"
 "              (prefix-numeric-value current-prefix-arg)\\\n"
-"              t))\",\n"
-"  doc: /* @dots{} /*)\n"
+"              t)\",\n"
+"       doc: /* @dots{} */)\n"
 
 #. type: item
 #: original_texis/internals.texi:748
@@ -1416,6 +1402,9 @@ msgid ""
 "       doc: /* @dots{} */\n"
 "       attributes: @var{attr1} @var{attr2} @dots{})\n"
 msgstr ""
+"DEFUN (\"bar\", Fbar, Sbar, 0, UNEVALLED, 0\n"
+"       doc: /* @dots{} */\n"
+"       attributes: @var{attr1} @var{attr2} @dots{})\n"
 
 #. type: table
 #: original_texis/internals.texi:782
@@ -1457,10 +1446,8 @@ msgstr "これは関数がインラインとみなされることを抑止する
 
 #. type: Plain text
 #: original_texis/internals.texi:823
-#, fuzzy
-#| msgid "After the call to the @code{DEFUN} macro, you must write the argument list for the C function, including the types for the arguments.  If the primitive accepts a fixed maximum number of Lisp arguments, there must be one C argument for each Lisp argument, and each argument must be of type @code{Lisp_Object}.  (Various macros and functions for creating values of type @code{Lisp_Object} are declared in the file @file{lisp.h}.)  If the primitive has no upper limit on the number of Lisp arguments, it must have exactly two C arguments: the first is the number of Lisp arguments, and the second is the address of a block containing their values.  These have types @code{int} and @w{@code{Lisp_Object *}} respectively.  Since @code{Lisp_Object} can hold any Lisp object of any data type, you can determine the actual data type only at run time; so if you want a primitive to accept only a certain type of argument, you must check the type explicitly using a suitable predicate (@pxref{Type Predicates})."
 msgid "After the call to the @code{DEFUN} macro, you must write the argument list for the C function, including the types for the arguments.  If the primitive accepts a fixed maximum number of Lisp arguments, there must be one C argument for each Lisp argument, and each argument must be of type @code{Lisp_Object}.  (Various macros and functions for creating values of type @code{Lisp_Object} are declared in the file @file{lisp.h}.)  If the primitive is a special form, it must accept a Lisp list containing its unevaluated Lisp arguments as a single argument of type @code{Lisp_Object}.  If the primitive has no upper limit on the number of evaluated Lisp arguments, it must have exactly two C arguments: the first is the number of Lisp arguments, and the second is the address of a block containing their values.  These have types @code{ptrdiff_t} and @w{@code{Lisp_Object *}}, respectively.  Since @code{Lisp_Object} can hold any Lisp object of any data type, you can determine the actual data type only at run time; so if you want a primitive to accept only a certain type of argument, you must check the type explicitly using a suitable predicate (@pxref{Type Predicates})."
-msgstr "@code{DEFUN}マクロ呼び出しの後には、そのC関数にたいする引数リストを、その引数のタイプを含めて記述しなければなりません。そのプリミティブがLispで固定された最大個数をもつ引数を受け入れるなら、Lisp引数それぞれにたいして1つのC引数をもち、各引数のタイプは@code{Lisp_Object}でなければなりません(ファイル@file{lisp.h}では、タイプ@code{Lisp_Object}の値を作成する種々のマクロと関数が宣言されている)。そのプリミティブのLispの最大引数個数に上限がない場合、それは正確に2つのC引数をもたなければなりません。1つ目はLisp引数の個数で、2つ目はそれらの値を含むブロックのアドレスです。これらはそれぞれ@code{int}、@w{@code{Lisp_Object *}}のタイプをもちます。@code{Lisp_Object}は任意のデータ型と任意のLispオブジェクトを保持できるので、実行時のみ実際のデータ型を判断できます。特定のタイプの引数だけを受け入れるプリミティブを記述したい場合は、適切な述語を使用してタイプを明確にチェックしなければなりません(@ref{Type Predicates}を参照)。"
+msgstr "@code{DEFUN}マクロ呼び出しの後には、そのC関数にたいする引数リストを引数のタイプを含めて記述しなければなりません。そのプリミティブがLispで固定された最大個数をもつ引数を受け入れるなら、Lisp引数それぞれにたいして1つのC引数をもち、各引数のタイプは@code{Lisp_Object}でなければなりません(ファイル@file{lisp.h}ではタイプ@code{Lisp_Object}の値を作成する種々のマクロと関数が宣言されている)。プリミティブがスペシャルフォームなら、評価されないタイプ@code{Lisp_Object}の単一のLisp引数を含むLispリストを受け取らなければなりません。プリミティブのLispの最大引数個数に上限がない場合には正確に2つのC引数をもたなければなりません。1つ目はLisp引数の個数、2つ目はそれらの値を含むブロックのアドレスです。これらはそれぞれ@code{ptrdiff_t}、@w{@code{Lisp_Object *}}のタイプをもちます。@code{Lisp_Object}は任意のデータ型と任意のLispオブジェクトを保持できるので、実行時のみ実際のデータ型を判断できます。特定のタイプの引数だけを受け入れるプリミティブを記述したい場合は、適切な述語を使用してタイプを明確にチェックしなければなりません(@ref{Type Predicates}を参照)。"
 
 #. type: cindex
 #: original_texis/internals.texi:823
@@ -1483,7 +1470,7 @@ msgstr "protect C variables from garbage collection"
 #. type: Plain text
 #: original_texis/internals.texi:840
 msgid "Within the function @code{For} itself, the local variable @code{args} refers to objects controlled by Emacs's stack-marking garbage collector.  Although the garbage collector does not reclaim objects reachable from C @code{Lisp_Object} stack variables, it may move some of the components of an object, such as the contents of a string or the text of a buffer.  Therefore, functions that access these components must take care to refetch their addresses after performing Lisp evaluation.  This means that instead of keeping C pointers to string contents or buffer text, the code should keep the buffer or string position, and recompute the C pointer from the position after performing Lisp evaluation.  Lisp evaluation can occur via calls to @code{eval_sub} or @code{Feval}, either directly or indirectly."
-msgstr ""
+msgstr "関数@code{For}自体ではローカル変数@code{args}はEmacsのスタックマーキングによるガーベージコレクターが制御するオブジェクトを参照します。ガーベージコレクターはたとえCの@code{Lisp_Object}スタック変数から到達可能なオブジェクトを回収しなくても、文字列コンテンツやバッファーのテキストのようなオブジェクトの何らかのコンポーネントを移動するかもしれません。したがってこれらのコンポーネントにアクセスする関数はLispの評価を行なった後に、それらのアドレスの再取得に留意しなければなりません。これはコードが文字列コンテンツやバッファーテキストにたいするCポインターを維持するかわりに、バッファーや文字列の位置を維持して、Lispの評価を行なった後にその位置からCポインターを再計算する必要があることを意味しています。Lisp評価は直接と間接を問わず、@code{eval_sub}や@code{Feval}の呼び出しを通じて発生する可能性があります。"
 
 #. type: cindex
 #: original_texis/internals.texi:841
@@ -1591,12 +1578,7 @@ msgstr "以下はより複雑な引数をもつ別の関数例です。これは
 
 #. type: group
 #: original_texis/internals.texi:915
-#, fuzzy, no-wrap
-#| msgid ""
-#| "DEFUN (\"coordinates-in-window-p\", Fcoordinates_in_window_p,\n"
-#| "  Scoordinates_in_window_p, 2, 2, 0,\n"
-#| "  doc: /* Return non-nil if COORDINATES are in WINDOW.\n"
-#| "  ...\n"
+#, no-wrap
 msgid ""
 "DEFUN (\"coordinates-in-window-p\", Fcoordinates_in_window_p,\n"
 "       Scoordinates_in_window_p, 2, 2, 0,\n"
@@ -1604,9 +1586,9 @@ msgid ""
 "  @dots{}\n"
 msgstr ""
 "DEFUN (\"coordinates-in-window-p\", Fcoordinates_in_window_p,\n"
-"  Scoordinates_in_window_p, 2, 2, 0,\n"
-"  doc: /* Return non-nil if COORDINATES are in WINDOW.\n"
-"  ...\n"
+"       Scoordinates_in_window_p, 2, 2, 0,\n"
+"       doc: /* Return non-nil if COORDINATES are in WINDOW.\n"
+"  @dots{}\n"
 
 #. type: group
 #: original_texis/internals.texi:924
@@ -1630,18 +1612,7 @@ msgstr ""
 
 #. type: group
 #: original_texis/internals.texi:936
-#, fuzzy, no-wrap
-#| msgid ""
-#| "  CHECK_LIVE_WINDOW (window);\n"
-#| "  w = XWINDOW (window);\n"
-#| "  f = XFRAME (w->frame);\n"
-#| "  CHECK_CONS (coordinates);\n"
-#| "  lx = Fcar (coordinates);\n"
-#| "  ly = Fcdr (coordinates);\n"
-#| "  CHECK_NUMBER_OR_FLOAT (lx);\n"
-#| "  CHECK_NUMBER_OR_FLOAT (ly);\n"
-#| "  x = FRAME_PIXEL_X_FROM_CANON_X (f, lx) + FRAME_INTERNAL_BORDER_WIDTH(f);\n"
-#| "  y = FRAME_PIXEL_Y_FROM_CANON_Y (f, ly) + FRAME_INTERNAL_BORDER_WIDTH(f);\n"
+#, no-wrap
 msgid ""
 "  w = decode_live_window (window);\n"
 "  f = XFRAME (w->frame);\n"
@@ -1653,16 +1624,15 @@ msgid ""
 "  x = FRAME_PIXEL_X_FROM_CANON_X (f, lx) + FRAME_INTERNAL_BORDER_WIDTH (f);\n"
 "  y = FRAME_PIXEL_Y_FROM_CANON_Y (f, ly) + FRAME_INTERNAL_BORDER_WIDTH (f);\n"
 msgstr ""
-"  CHECK_LIVE_WINDOW (window);\n"
-"  w = XWINDOW (window);\n"
+"  w = decode_live_window (window);\n"
 "  f = XFRAME (w->frame);\n"
 "  CHECK_CONS (coordinates);\n"
 "  lx = Fcar (coordinates);\n"
 "  ly = Fcdr (coordinates);\n"
-"  CHECK_NUMBER_OR_FLOAT (lx);\n"
-"  CHECK_NUMBER_OR_FLOAT (ly);\n"
-"  x = FRAME_PIXEL_X_FROM_CANON_X (f, lx) + FRAME_INTERNAL_BORDER_WIDTH(f);\n"
-"  y = FRAME_PIXEL_Y_FROM_CANON_Y (f, ly) + FRAME_INTERNAL_BORDER_WIDTH(f);\n"
+"  CHECK_NUMBER (lx);\n"
+"  CHECK_NUMBER (ly);\n"
+"  x = FRAME_PIXEL_X_FROM_CANON_X (f, lx) + FRAME_INTERNAL_BORDER_WIDTH (f);\n"
+"  y = FRAME_PIXEL_Y_FROM_CANON_Y (f, ly) + FRAME_INTERNAL_BORDER_WIDTH (f);\n"
 
 #. type: group
 #: original_texis/internals.texi:943
@@ -1684,7 +1654,7 @@ msgstr ""
 msgid ""
 "    @dots{}\n"
 "\n"
-msgstr ""
+msgstr "    @dots{}\n\n"
 
 #. type: group
 #: original_texis/internals.texi:950
@@ -1710,12 +1680,7 @@ msgstr ""
 
 #. type: group
 #: original_texis/internals.texi:965
-#, fuzzy, no-wrap
-#| msgid ""
-#| "    default:\n"
-#| "      abort ();\n"
-#| "    @}\n"
-#| "@}\n"
+#, no-wrap
 msgid ""
 "    default:\n"
 "      emacs_abort ();\n"
@@ -1723,7 +1688,7 @@ msgid ""
 "@}\n"
 msgstr ""
 "    default:\n"
-"      abort ();\n"
+"      emacs_abort ();\n"
 "    @}\n"
 "@}\n"
 
@@ -1745,7 +1710,7 @@ msgstr "@file{eval.c}は例を探すのに適したファイルです。@file{li
 #. type: Plain text
 #: original_texis/internals.texi:988
 msgid "If you define a function which is side-effect free or pure, give it a non-@code{nil} @code{side-effect-free} or @code{pure} property, respectively (@pxref{Standard Properties})."
-msgstr ""
+msgstr "副作用がない関数や純粋関数を定義したら、@code{side-effect-free}や@code{pure}のプロパティに非@code{nil}を与えてください(@ref{Standard Properties}を参照)。"
 
 #. type: section
 #: original_texis/internals.texi:990
