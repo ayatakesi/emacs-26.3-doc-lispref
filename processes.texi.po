@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-07-13 15:15+0900\n"
-"PO-Revision-Date: 2020-07-06 11:52+0900\n"
+"PO-Revision-Date: 2020-07-20 04:28+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -1062,10 +1062,8 @@ msgstr "asynchronous subprocess"
 
 #. type: Plain text
 #: original_texis/processes.texi:593
-#, fuzzy
-#| msgid "In this section, we describe how to create an @dfn{asynchronous process}.  After an asynchronous process is created, it runs in parallel with Emacs, and Emacs can communicate with it using the functions described in the following sections (@pxref{Input to Processes}, and @pxref{Output from Processes}).  Note that process communication is only partially asynchronous: Emacs sends data to the process only when certain functions are called, and Emacs accepts data from the process only while waiting for input or for a time delay."
 msgid "In this section, we describe how to create an @dfn{asynchronous process}.  After an asynchronous process is created, it runs in parallel with Emacs, and Emacs can communicate with it using the functions described in the following sections (@pxref{Input to Processes}, and @pxref{Output from Processes}).  Note that process communication is only partially asynchronous: Emacs sends and receives data to and from a process only when those functions are called."
-msgstr "このセクションでは、@dfn{非同期プロセス(asynchronous process)}を作成する方法について説明します。非同期プロセスは作成後、Emacsと並列して実行され、Emacsは以降のセクション(@ref{Input to Processes}および@ref{Output from Processes}を参照)で説明する関数を使用してプロセスとコミュニケーションができます。プロセスコミュニケーションは、部分的に非同期なだけであることに注意してください。Emacsは特定の関数を呼び出したときだけプロセスにデータを送信でき、Emacsは入力の待機中または一定の遅延時間の後にのみ、プロセスのデータを受け取ることができます。"
+msgstr "このセクションでは@dfn{非同期プロセス(asynchronous process)}を作成する方法について説明します。非同期プロセスは作成後にEmacsと並列して実行され、Emacsは以降のセクション(@ref{Input to Processes}と@ref{Output from Processes}を参照)で説明する関数を使用してプロセスとコミュニケーションができます。プロセスコミュニケーションは部分的に非同期なだけであることに注意してください。Emacsはこれらの関数を呼び出したときだけプロセスとのデータを送受信できます。"
 
 #. type: cindex
 #: original_texis/processes.texi:594
@@ -2025,10 +2023,8 @@ msgstr "サブプロセスの入力はテキストをファイルに書き込む
 
 #. type: Plain text
 #: original_texis/processes.texi:1205
-#, fuzzy
-#| msgid "Sometimes the system is unable to accept input for that process, because the input buffer is full.  When this happens, the send functions wait a short while, accepting output from subprocesses, and then try again.  This gives the subprocess a chance to read more of its pending input and make space in the buffer.  It also allows filters, sentinels and timers to run---so take account of that in writing your code."
 msgid "Sometimes the system is unable to accept input for that process, because the input buffer is full.  When this happens, the send functions wait a short while, accepting output from subprocesses, and then try again.  This gives the subprocess a chance to read more of its pending input and make space in the buffer.  It also allows filters (including the one currently running), sentinels and timers to run---so take account of that in writing your code."
-msgstr "入力バッファーが一杯のため、システムがプロセスからの入力を受け取ることができないことがあります。これが発生したときは、送信関数はしばらく待機して、サブプロセスの出力を受け取り、再度送信を試みます。これは保留となっている更なる入力を読み取り、バッファーに空きを作る機会をサブプロセスに与えます。これはフィルター、センチネル、タイマーの実行も可能にするので、コードを記述する際はそれを考慮してください。"
+msgstr "入力バッファーが一杯のために、システムがプロセスからの入力を受け取ることができないことがあります。これが発生したときには、送信関数はしばらく待機してサブプロセスの出力を受け取り、再度送信を試みます。これは保留となっている更なる入力を読み取り、バッファーに空きを作る機会をサブプロセスに与えます。これはフィルター(現在実行中のものを含む)、センチネル、タイマーの実行も可能にするのでコードを記述する際はそれを考慮してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1210
@@ -2302,10 +2298,8 @@ msgstr "サブプロセス終了時にEmacsは保留中の出力を読み取っ�
 
 #. type: Plain text
 #: original_texis/processes.texi:1427
-#, fuzzy
-#| msgid "Output from a subprocess can arrive only while Emacs is waiting: when reading terminal input (see the function @code{waiting-for-user-input-p}), in @code{sit-for} and @code{sleep-for} (@pxref{Waiting}), and in @code{accept-process-output} (@pxref{Accepting Output}).  This minimizes the problem of timing errors that usually plague parallel programming.  For example, you can safely create a process and only then specify its buffer or filter function; no output can arrive before you finish, if the code in between does not call any primitive that waits."
 msgid "Output from a subprocess can arrive only while Emacs is waiting: when reading terminal input (see the function @code{waiting-for-user-input-p}), in @code{sit-for} and @code{sleep-for} (@pxref{Waiting}), in @code{accept-process-output} (@pxref{Accepting Output}), and in functions which send data to processes (@pxref{Input to Processes}).  This minimizes the problem of timing errors that usually plague parallel programming.  For example, you can safely create a process and only then specify its buffer or filter function; no output can arrive before you finish, if the code in between does not call any primitive that waits."
-msgstr "サブプロセスからの出力は、Emacsが待機している間、端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、および@ref{Accepting Output}の@code{accept-process-output}を参照されたい)のみ到着可能です。これは、並列プログラミングで普遍的に悩みの種である、タイミングエラーの問題を最小化します。たとえば、安全にプロセスを作成して、その後でのみプロセスのバッファーやフィルター関数を指定できます。その間にあるコードが待機するプリミティブを何も呼び出さなければ、完了するまで到着可能な出力はありません。"
+msgstr "サブプロセスからの出力はEmacsが待機している間、端末入力読み取り時(関数@code{waiting-for-user-input-p}、@ref{Waiting}の@code{sit-for}と@code{sleep-for}、@ref{Accepting Output}の@code{accept-process-output}、およびプロセスへのデータ送信関数(@ref{Input to Processes}を参照)のみ到着可能です。これは並列プログラミングで普遍的に悩みの種であるタイミングエラーの問題を最小化します。たとえば安全にプロセスを作成して、その後でのみプロセスのバッファーやフィルター関数を指定できます。その間にあるコードが待機するプリミティブを何も呼び出さなければ、完了するまで到着可能な出力はありません。"
 
 #. type: defvar
 #: original_texis/processes.texi:1428
@@ -2569,7 +2563,7 @@ msgstr "プロセスの@dfn{フィルター関数(filter function)}は、関連�
 #. type: Plain text
 #: original_texis/processes.texi:1602
 msgid "By default, the error output from the process, if any, is also passed to the filter function, unless the destination for the standard error stream of the process was separated from the standard output when the process was created.  Emacs will only call the filter function during certain function calls.  @xref{Output from Processes}.  Note that if any of those functions are called by the filter, the filter may be called recursively."
-msgstr ""
+msgstr "デフォルトではプロセス用のエラー出力がもしあれば、プロセス作成時にプロセスの標準エラーストリームが標準出力から分離されていなければフィルター関数に渡されます。Emacsは特定の関数の呼び出し中のみフィルター関数を呼び出します。@ref{Output from Processes}を参照してください。フィルターによりこれらの関数のいずれかが呼び出されると、フィルターが再帰的に呼び出されるかもしれないことに注意してください。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1606
@@ -2642,7 +2636,7 @@ msgstr "(display-buffer (process-buffer proc))\n"
 #. type: Plain text
 #: original_texis/processes.texi:1665
 msgid "To force point to the end of the new output, no matter where it was previously, eliminate the variable @code{moving} from the example and call @code{goto-char} unconditionally.  Note that this doesn't necessarily move the window point.  The default filter actually uses @code{insert-before-markers} which moves all markers, including the window point.  This may move unrelated markers, so it's generally better to move the window point explicitly, or set its insertion type to @code{t} (@pxref{Window Point})."
-msgstr ""
+msgstr "以前のポイント位置と関係なく新たな出力の終端にポイント位置を強制するためには、例から変数@code{moving}を削除して無条件で@code{goto-char}を呼び出してください。これはウィンドウポイントの移動では必要ないことに注意してください。デフォルトのフィルターは実際にはウィンドウポイントを含むすべてのマーカーを移動する@code{insert-before-markers}を使用します。これは無関係のマーカーを移動するかもしれないので、一般的にはウィンドウポイントを明示的に移動するか、挿入タイプを@code{t} (@ref{Window Point}を参照)にセットしたほうがよいでしょう。"
 
 #. type: Plain text
 #: original_texis/processes.texi:1674
@@ -2883,7 +2877,7 @@ msgstr "関数@code{accept-process-output}は@var{process}、@var{process}が@co
 #. type: Plain text
 #: original_texis/processes.texi:1842
 msgid "If a connection from a process contains buffered data, @code{accept-process-output} can return non-@code{nil} even after the process has exited.  Therefore, although the following loop:"
-msgstr ""
+msgstr "プロセスからの接続にバッファーデータが含まれる場合には、プロセスのexit後でも@code{accept-process-output}が非@code{nil}をリターンするかもしれません。したがって、たとえ以下のようなループでも:"
 
 #. type: example
 #: original_texis/processes.texi:1847
@@ -2893,17 +2887,20 @@ msgid ""
 "(while (process-live-p process)\n"
 "  (accept-process-output process))\n"
 msgstr ""
+";; このループにはバグがある\n"
+"(while (process-live-p process)\n"
+"  (accept-process-output process))\n"
 
 #. type: Plain text
 #: original_texis/processes.texi:1854
 msgid "will often read all output from @var{process}, it has a race condition and can miss some output if @code{process-live-p} returns @code{nil} while the connection still contains data.  Better is to write the loop like this:"
-msgstr ""
+msgstr "これは@var{process}からすべての出力を読み取ることが頻繁にあり、接続にまだデータが含まれている間に@code{process-live-p}が@code{nil}をリターンすると競合条件をもつとともに何らかのデータが失われるかもしれません。以下のようなループを記述するほうがよいでしょう:"
 
 #. type: example
 #: original_texis/processes.texi:1857
 #, no-wrap
 msgid "(while (accept-process-output process))\n"
-msgstr ""
+msgstr "(while (accept-process-output process))\n"
 
 #. type: cindex
 #: original_texis/processes.texi:1861
