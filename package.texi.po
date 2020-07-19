@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-07-13 15:15+0900\n"
-"PO-Revision-Date: 2020-06-12 22:00+0900\n"
+"PO-Revision-Date: 2020-07-20 04:47+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -524,10 +524,8 @@ msgstr "パッケージアーカイブはパッケージ、および関連する
 
 #. type: Plain text
 #: original_texis/package.texi:310
-#, fuzzy
-#| msgid "A convenient way to set up and update a package archive is via the @code{package-x} library.  This is included with Emacs, but not loaded by default; type @kbd{M-x load-library @key{RET} package-x @key{RET}} to load it, or add @code{(require 'package-x)} to your init file.  @xref{Lisp Libraries,, Lisp Libraries, emacs, The GNU Emacs Manual}.  Once loaded, you can make use of the following:"
 msgid "A convenient way to set up and update a package archive is via the @code{package-x} library.  This is included with Emacs, but not loaded by default; type @kbd{M-x load-library @key{RET} package-x @key{RET}} to load it, or add @code{(require 'package-x)} to your init file.  @xref{Lisp Libraries,, Lisp Libraries, emacs, The GNU Emacs Manual}."
-msgstr "手軽なのは、@code{package-x}を通じてパッケージアーカイブのセットアップと更新を行う方法です。これはEmacsに含まれていますが、デフォルトではロードされません。ロードするには@kbd{M-x load-library @key{RET} package-x @key{RET}}、または@code{(require 'package-x)}をinitファイルに追加します。@ref{Lisp Libraries,, Lisp Libraries, emacs, The GNU Emacs Manual}を参照してください。一度ロードされれば、以下を使用できます:"
+msgstr "手軽なのは@code{package-x}を通じてパッケージアーカイブのセットアップと更新を行う方法です。これはEmacsに含まれていますがデフォルトではロードされません。ロードするには@kbd{M-x load-library @key{RET} package-x @key{RET}}、または@code{(require 'package-x)}をinitファイルに追加します。@ref{Lisp Libraries,, Lisp Libraries, emacs, The GNU Emacs Manual}を参照してください。"
 
 #. type: Plain text
 #: original_texis/package.texi:314
