@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-07-13 15:15+0900\n"
-"PO-Revision-Date: 2020-07-06 09:12+0900\n"
+"PO-Revision-Date: 2020-07-20 02:48+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -899,10 +899,8 @@ msgstr "numeric-value"
 
 #. type: table
 #: original_texis/nonascii.texi:557
-#, fuzzy
-#| msgid "Corresponds to the Unicode @code{Numeric_Value} property for characters whose @code{Numeric_Type} is @samp{Numeric}.  The value of this property is a number.  Examples of characters that have this property include fractions, subscripts, superscripts, Roman numerals, currency numerators, and encircled numbers.  For example, the value of this property for the character @code{U+2155} (@sc{vulgar fraction one fifth}) is @code{0.2}.  For unassigned codepoints, the value is @code{nil}, which means @acronym{NaN}."
 msgid "Corresponds to the Unicode @code{Numeric_Value} property for characters whose @code{Numeric_Type} is @samp{Numeric}.  The value of this property is a number.  Examples of characters that have this property include fractions, subscripts, superscripts, Roman numerals, currency numerators, and encircled numbers.  For example, the value of this property for the character U+2155 @sc{vulgar fraction one fifth} is @code{0.2}.  For characters that don't have any numeric value, and for unassigned codepoints, the value is @code{nil}, which means @acronym{NaN}."
-msgstr "@code{Numeric_Type}が@samp{Numeric}であるような文字の、Unicodeプロパティ@code{Numeric_Value}に対応する。このプロパティの値は数字。このプロパティをもつ文字の例には分数、添字、上付き数字、ローマ数字、通貨分数(訳注: 原文は``currency numerators''でベンガル語の分数値用の歴史的な記号を指すと思われる)、丸数字が含まれる。たとえば、文字@code{U+2155}(@sc{vulgar fraction one fifth: (訳注)スラッシュで分子と分母を区切った表記による5分の1のこと})にたいするこのプロパティの値は@code{0.2}。未割り当てのコードポイントにたいする値は、@acronym{NaN}を意味する@code{nil}。"
+msgstr "@code{Numeric_Type}が@samp{Numeric}であるような文字のUnicodeプロパティ@code{Numeric_Value}に対応する。このプロパティの値は数字。このプロパティをもつ文字の例には分数、添字、上付き数字、ローマ数字、通貨分数(訳注: 原文は``currency numerators''でベンガル語の分数値用の歴史的な記号を指すと思われる)、丸数字が含まれる。たとえば文字U+2155 (@sc{vulgar fraction one fifth: (訳注)スラッシュで分子と分母を区切った表記による5分の1のこと})にたいするこのプロパティの値は@code{0.2}。数値をもたない文字と未割り当てのコードポイントにたいする値は@acronym{NaN}を意味する@code{nil}。"
 
 #. type: cindex
 #: original_texis/nonascii.texi:558
@@ -1018,7 +1016,7 @@ msgstr "special-uppercase"
 #. type: table
 #: original_texis/nonascii.texi:628
 msgid "Corresponds to Unicode language- and context-independent special upper-casing rules.  The value of this property is a string (which may be empty).  For example mapping for U+00DF @sc{latin small letter sharp s} is @code{\"SS\"}.  For characters with no special mapping, the value is @code{nil} which means @code{uppercase} property needs to be consulted instead."
-msgstr ""
+msgstr "Unicodeの言語やコンテキストに依存しない特別な大文字caseルールに対応する。このプロパティの値は文字列(空も可)。たとえばU+00DF @sc{latin small letter sharp s}にたいするマッピングは@code{\"SS\"}。特別なマッピングのない文字にたいする値は@code{nil} (かわりに@code{uppercase}プロパティの照会が必要なことを意味する)。"
 
 #. type: item
 #: original_texis/nonascii.texi:629
@@ -1029,7 +1027,7 @@ msgstr "special-lowercase"
 #. type: table
 #: original_texis/nonascii.texi:638
 msgid "Corresponds to Unicode language- and context-independent special lower-casing rules.  The value of this property is a string (which may be empty).  For example mapping for U+0130 @sc{latin capital letter i with dot above} the value is @code{\"i\\u0307\"} (i.e. 2-character string consisting of @sc{latin small letter i} followed by U+0307 @sc{combining dot above}).  For characters with no special mapping, the value is @code{nil} which means @code{lowercase} property needs to be consulted instead."
-msgstr ""
+msgstr "Unicodeの言語やコンテキストに依存しない特別な小文字caseルールに対応する。このプロパティの値は文字列(空も可)。たとえばU+0130 @sc{latin capital letter i with dot above}にたいするマッピングは@code{\"SS\"}。特別なマッピングのない文字にたいする値は@code{nil} (かわりに@code{lowercase}プロパティの照会が必要なことを意味する)。"
 
 #. type: item
 #: original_texis/nonascii.texi:639
@@ -1040,7 +1038,7 @@ msgstr "special-titlecase"
 #. type: table
 #: original_texis/nonascii.texi:645
 msgid "Corresponds to Unicode unconditional special title-casing rules.  The value of this property is a string (which may be empty).  For example mapping for U+FB01 @sc{latin small ligature fi} the value is @code{\"Fi\"}.  For characters with no special mapping, the value is @code{nil} which means @code{titlecase} property needs to be consulted instead."
-msgstr ""
+msgstr "Unicodeの無条件の特別なタイトルcaseルールに対応する。このプロパティの値は文字列(空も可)。たとえばU+FB01 @sc{latin small ligature fi}にたいするマッピングは@code{\"Fi\"}。特別なマッピングのない文字にたいする値は@code{nil} (かわりに@code{titlecase}プロパティの照会が必要なことを意味する)。"
 
 #. type: defun
 #: original_texis/nonascii.texi:647
@@ -1753,10 +1751,8 @@ msgstr "コーディングシステムはそれぞれ特定の文字コード変
 
 #. type: Plain text
 #: original_texis/nonascii.texi:1058
-#, fuzzy
-#| msgid "In general, a coding system doesn't guarantee roundtrip identity: decoding a byte sequence using coding system, then encoding the resulting text in the same coding system, can produce a different byte sequence.  But some coding systems do guarantee that the byte sequence will be the same as what you originally decoded.  Here are a few examples:"
 msgid "In general, a coding system doesn't guarantee roundtrip identity: decoding a byte sequence using a coding system, then encoding the resulting text in the same coding system, can produce a different byte sequence.  But some coding systems do guarantee that the byte sequence will be the same as what you originally decoded.  Here are a few examples:"
-msgstr "一般的に、コーディングシステムは可逆的な同一性を保証しません。あるコーディングシステムを使用してバイトシーケンスをデコードしてから、同じコーディングシステムで結果テキストをエンコードしても、異なるバイトシーケンスが生成される可能性があります。しかし、デコードされたオリジナルのバイトシーケンスとなることを保証するコーディングシステムもいくつかあります。以下にいくつかの例を挙げます:"
+msgstr "一般的にコーディングシステムは可逆的な同一性を保証しません。あるコーディングシステムを使用してバイトシーケンスをデコードしてから、同じコーディングシステムで結果テキストをエンコードしても、異なるバイトシーケンスが生成される可能性があります。しかしデコードされたオリジナルのバイトシーケンスとなることを保証するコーディングシステムもいくつかあります。以下にいくつかの例を挙げます:"
 
 #. type: quotation
 #: original_texis/nonascii.texi:1061
@@ -2924,7 +2920,7 @@ msgstr "このコマンドはコーディングシステム@var{coding-system}�
 #. type: deffn
 #: original_texis/nonascii.texi:1920
 msgid "If decoded text is inserted in some buffer, this command returns the length of the decoded text.  If that buffer is a unibyte buffer (@pxref{Selecting a Representation}), the internal representation of the decoded text (@pxref{Text Representations}) is inserted into the buffer as individual bytes."
-msgstr ""
+msgstr "デコードしたテキストを何らかのバッファーに挿入すると、このコマンドはデコード済みテキストの長さをリターンする。バッファーがユニバイトバッファー(@ref{Selecting a Representation}を参照)なら、デコード済みテキストの内部表現(@ref{Text Representations}を参照)が個別のバイトとしてバッファーに挿入される。"
 
 #. type: deffn
 #: original_texis/nonascii.texi:1924
@@ -2944,10 +2940,8 @@ msgstr "この関数は@var{coding-system}で@var{string}内のテキストを�
 
 #. type: defun
 #: original_texis/nonascii.texi:1941
-#, fuzzy
-#| msgid "If optional argument @var{buffer} specifies a buffer, the decoded text is inserted in that buffer after point (point does not move).  In this case, the return value is the length of the decoded text."
 msgid "If optional argument @var{buffer} specifies a buffer, the decoded text is inserted in that buffer after point (point does not move).  In this case, the return value is the length of the decoded text.  If that buffer is a unibyte buffer, the internal representation of the decoded text is inserted into it as individual bytes."
-msgstr "オプション引数@var{buffer}がバッファーを指定する場合、デコードされたテキストは、そのバッファー内のポイントの後に挿入される(ポイントは移動しない)。この場合、リターン値はデコードされたテキストの長さとなる。"
+msgstr "オプション引数@var{buffer}がバッファーを指定する場合には、デコードされたテキストはバッファー内のポイントの後に挿入される(ポイントは移動しない)。この場合にはリターン値はデコードされたテキストの長さとなる。バッファーがユニバイトバッファーなら、デコード済みテキストの内部表現が個別のバイトとしてバッファーに挿入される。"
 
 #. type: cindex
 #: original_texis/nonascii.texi:1942
