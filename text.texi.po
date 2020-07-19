@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emacs-lispref 26.1\n"
 "POT-Creation-Date: 2020-07-13 15:16+0900\n"
-"PO-Revision-Date: 2020-07-06 09:04+0900\n"
+"PO-Revision-Date: 2020-07-19 18:06+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -3557,10 +3557,8 @@ msgstr "インタラクティブに呼び出された際には、@var{column}は
 
 #. type: deffn
 #: original_texis/text.texi:2253
-#, fuzzy
-#| msgid "If it is impossible to move to column @var{column} because that is in the middle of a multicolumn character such as a tab, point moves to the end of that character.  However, if @var{force} is non-@code{nil}, and @var{column} is in the middle of a tab, then @code{move-to-column} converts the tab into spaces so that it can move precisely to column @var{column}.  Other multicolumn characters can cause anomalies despite @var{force}, since there is no way to split them."
 msgid "If it is impossible to move to column @var{column} because that is in the middle of a multicolumn character such as a tab, point moves to the end of that character.  However, if @var{force} is non-@code{nil}, and @var{column} is in the middle of a tab, then @code{move-to-column} either converts the tab into spaces (when @code{indent-tabs-mode} is @code{nil}), or inserts enough spaces before it (otherwise), so that point can move precisely to column @var{column}.  Other multicolumn characters can cause anomalies despite @var{force}, since there is no way to split them."
-msgstr "列@var{column}が、タブのような複数列を占める文字の中間にあるために列を移動することが不可能な場合、ポイントはその文字の終端に移動される。しかし@var{force}が非@code{nil}、かつ@var{column}がタブの中間にあるなら、@code{move-to-column}はタブをスペースに変換して、正確に列@var{column}に移動することができる。それ以外の複数列文字については、それらを分割する手段がないので、@var{force}指定に関わらず、異常を引き起こす恐れがある。"
+msgstr "列@var{column}がタブのような複数列を占める文字の中間にあるために列を移動することが不可能な場合には、ポイントはその文字の終端に移動される。しかし@var{force}が非@code{nil}、かつ@var{column}がタブの中間にあるなら、(@code{indent-tabs-mode}が@code{nil}なら)@code{move-to-column}はタブをスペースに変換するか、(それ以外なら)その前に十分なスペースを挿入するので正確に列@var{column}に移動することができる。それ以外の複数列文字については分割する手段がないので、@var{force}指定に関わらず異常を引き起こす恐れがある。"
 
 #. type: deffn
 #: original_texis/text.texi:2257
@@ -3727,10 +3725,8 @@ msgstr "これは以下のことを行う:"
 
 #. type: itemize
 #: original_texis/text.texi:2337
-#, fuzzy
-#| msgid "First, it checks whether Transient Mark mode is enabled and the region is active.  If so, it called @code{indent-region} to indent all the text in the region (@pxref{Region Indent})."
 msgid "First, it checks whether Transient Mark mode is enabled and the region is active.  If so, it calls @code{indent-region} to indent all the text in the region (@pxref{Region Indent})."
-msgstr "まずTransient Markモードが有効か、そしてリージョンがアクティブかどうかをチェックする。もしそうなら、リージョン内のテキストすべてをインデントするために@code{indent-region}を呼び出す(@ref{Region Indent}を参照)。"
+msgstr "まずTransient Markモードが有効かどうか、そしてリージョンがアクティブかどうかをチェックする。もしそうならリージョン内のテキストすべてをインデントするために@code{indent-region}を呼び出す(@ref{Region Indent}を参照)。"
 
 #. type: itemize
 #: original_texis/text.texi:2344
