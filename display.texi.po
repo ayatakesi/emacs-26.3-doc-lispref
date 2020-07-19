@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Emacs 25.1\n"
 "POT-Creation-Date: 2020-07-13 15:14+0900\n"
-"PO-Revision-Date: 2020-07-06 16:15+0900\n"
+"PO-Revision-Date: 2020-07-20 04:46+0900\n"
 "Last-Translator: Ayanokoji Takesi <ayanokoji.takesi@gmail.com>\n"
 "Language-Team: \n"
 "Language: ja\n"
@@ -4124,10 +4124,8 @@ msgstr "(:line-width @var{width} :color @var{color} :style @var{style})"
 
 #. type: table
 #: original_texis/display.texi:2375
-#, fuzzy
-#| msgid "This way you can explicitly specify all aspects of the box.  The value @var{width} specifies the width of the lines to draw; it defaults to 1.  A negative width @var{-n} means to draw a line of width @var{n} that occupies the space of the underlying text, thus avoiding any increase in the character height or width."
 msgid "This way you can explicitly specify all aspects of the box.  The value @var{width} specifies the width of the lines to draw; it defaults to 1.  A negative width @minus{}@var{n} means to draw a line of width @var{n} whose top and bottom parts occupy the space of the underlying text, thus avoiding any increase in the character height."
-msgstr "この方法では、枠のすべての形相を明示的に指定できる。値@var{width}は描画する線の幅を指定し、デフォルトは1。負の幅@var{-n}は、基礎テキストのスペースを占有する線幅@var{n}を意味し、文字の高さまたは幅を避けることができる。"
+msgstr "この方法では枠のすべての形相を明示的に指定できる。値@var{width}は描画する線の幅を指定する。デフォルトは1。負の幅 @minus{}@var{n}は、上端と下端が基礎テキストのスペースを占有する線幅@var{n}を意味しており、文字の高さの増加を避けることができる。"
 
 #. type: table
 #: original_texis/display.texi:2379
@@ -4284,12 +4282,12 @@ msgstr "値がフェイス名であるような変数を作りたがる人がい
 #: original_texis/display.texi:2479
 #, no-wrap
 msgid "face (non-removability of)"
-msgstr ""
+msgstr "face (non-removability of)"
 
 #. type: Plain text
 #: original_texis/display.texi:2483
 msgid "Note that once you have defined a face (usually with @code{defface}), you cannot later undefine this face safely, except by restarting Emacs."
-msgstr ""
+msgstr "(通常は@code{defface}により)一度フェイスを定義したら、Emacsを再起動する以外にそのフェイスを安全に未定義にすることはできません。"
 
 #. type: defmac
 #: original_texis/display.texi:2484
@@ -8366,10 +8364,8 @@ msgstr ":file @var{file}"
 
 #. type: table
 #: original_texis/display.texi:5067
-#, fuzzy
-#| msgid "This says to load the image from file @var{file}.  If @var{file} is not an absolute file name, it is expanded in @code{data-directory}."
 msgid "This says to load the image from file @var{file}.  If @var{file} is not an absolute file name, it is expanded relative to the @file{images} subdirectory of @code{data-directory}, and failing that, relative to the directories listed by @code{x-bitmap-file-path} (@pxref{Face Attributes})."
-msgstr "これは、ファイル@var{file}からイメージをロードすることを意味する。@var{file}が絶対ファイル名でなければ、それは@code{data-directory}内で展開される。"
+msgstr "これはファイル@var{file}からイメージをロードすることを意味する。@var{file}が絶対ファイル名でなければ、それは@code{data-directory}の@file{images}サブディレクトリーから相対的に展開される。これに失敗すると@code{x-bitmap-file-path}にリストされたディレクトリーから相対的に展開される(@ref{Face Attributes}を参照)。"
 
 #. type: item
 #: original_texis/display.texi:5068 original_texis/display.texi:5275
@@ -9624,10 +9620,8 @@ msgstr "size of image"
 
 #. type: defun
 #: original_texis/display.texi:5869
-#, fuzzy
-#| msgid "This function returns the size of an image as a pair @w{@code{(@var{width} . @var{height})}}.  @var{spec} is an image specification.  @var{pixels} non-@code{nil} means return sizes measured in pixels, otherwise return sizes measured in canonical character units (fractions of the width/height of the frame's default font).  @var{frame} is the frame on which the image will be displayed.  @var{frame} null or omitted means use the selected frame (@pxref{Input Focus})."
 msgid "This function returns the size of an image as a pair @w{@code{(@var{width} . @var{height})}}.  @var{spec} is an image specification.  @var{pixels} non-@code{nil} means return sizes measured in pixels, otherwise return sizes measured in the default character size of @var{frame} (@pxref{Frame Font}).  @var{frame} is the frame on which the image will be displayed.  @var{frame} @code{nil} or omitted means use the selected frame (@pxref{Input Focus})."
-msgstr "この関数は、ペアー@w{@code{(@var{width} . @var{height})}}として、イメージのサイズをリターンする。@var{spec}はイメージ仕様である。@var{pixels}が非@code{nil}ならピクセル単位、それ以外ならcanonicalな文字単位(そのフレームのデフォルトフォントの幅/高さの割合)で量ったサイズをリターンする。@var{frame}は、イメージが表示されるフレームである。@var{frame}が@code{nil}または省略された場合は、選択されたフレームを使用する(@ref{Input Focus}を参照)。"
+msgstr "この関数はペアー@w{@code{(@var{width} . @var{height})}}としてイメージのサイズをリターンする。@var{spec}はイメージspec。@var{pixels}が非@code{nil}ならピクセル単位、それ以外なら@var{frame}のデフォルトの文字サイズ単位で量ったサイズをリターンする(@ref{Frame Font}を参照)。@var{frame}はイメージが表示されるフレーム。@var{frame}が@code{nil}または省略された場合には選択されたフレームを使用する(@ref{Input Focus}を参照)。"
 
 #. type: defvar
 #: original_texis/display.texi:5871
@@ -12110,10 +12104,8 @@ msgstr "format-control"
 
 #. type: table
 #: original_texis/display.texi:7283
-#, fuzzy
-#| msgid "Characters of Unicode General Category `Cf', such as @samp{U+200E} (Left-to-Right Mark), but excluding characters that have graphic images, such as @samp{U+00AD} (Soft Hyphen)."
 msgid "Characters of Unicode General Category [Cf], such as U+200E @sc{left-to-right mark}, but excluding characters that have graphic images, such as U+00AD @sc{soft hyphen}."
-msgstr "@samp{U+200E}のようなUnicode General Category `Cf'の文字だが、@samp{U+00AD}(Soft Hyphen)のようにグラフィックイメージをもつ文字を除く。"
+msgstr "U+200E @sc{left-to-right mark}のようなUnicode General Category [Cf]の文字だが、U+00AD @sc{soft hyphen}のようにグラフィックイメージをもつ文字を除く。"
 
 #. type: item
 #: original_texis/display.texi:7284
@@ -12660,10 +12652,8 @@ msgstr "バッファー内で双方向の内容をもつ2つの文字列が並�
 
 #. type: itemize
 #: original_texis/display.texi:7672
-#, fuzzy
-#| msgid "Append the special character @code{U+200E}, LEFT-TO-RIGHT MARK, or @acronym{LRM}, to the end of each field that may have bidirectional content, or prepend it to the beginning of the following field.  The function @code{bidi-string-mark-left-to-right}, described below, comes in handy for this purpose.  (In a right-to-left paragraph, use @code{U+200F}, RIGHT-TO-LEFT MARK, or @acronym{RLM}, instead.)  This is one of the solutions recommended by the UBA."
 msgid "Append the special character U+200E @sc{left-to-right mark}, or @acronym{LRM}, to the end of each field that may have bidirectional content, or prepend it to the beginning of the following field.  The function @code{bidi-string-mark-left-to-right}, described below, comes in handy for this purpose.  (In a right-to-left paragraph, use U+200F @sc{right-to-left mark}, or @acronym{RLM}, instead.)  This is one of the solutions recommended by the UBA."
-msgstr "双方向の内容をもち得る各フィールド終端に、スペシャル文字LEFT-TO-RIGHT MARK(略して@acronym{LRM})の@code{U+200E}を付加する。後述の関数@code{bidi-string-mark-left-to-right}は、この目的に手頃である。(R2LパラグラフではかわりにRIGHT-TO-LEFT MARK、略して@acronym{RLM}の@code{U+200F}を使用する。) これはUBAにより推奨される解決策の1つである。"
+msgstr "双方向の内容をもち得る各フィールド終端に、スペシャル文字LEFT-TO-RIGHT MARK(略して@acronym{LRM})のU+200E @sc{left-to-right mark}を付加する。後述の関数@code{bidi-string-mark-left-to-right}は、この目的に手頃(R2LパラグラフではかわりにRIGHT-TO-LEFT MARK、略して@acronym{RLM}のU+200F @sc{right-to-left mark}を使用する)。これはUBAにより推奨される解決策の1つである。"
 
 #. type: itemize
 #: original_texis/display.texi:7677
