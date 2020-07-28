@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-28 23:32+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-07-26 20:43+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,48 +18,48 @@ msgstr ""
 
 #: TITLES/src/customize.texi.pl:6
 msgid "@chapter Customization Settings"
-msgstr ""
+msgstr "@chapter カスタマイゼーション設定"
 
 #: TITLES/src/customize.texi.pl:7
 msgid "@section Common Item Keywords"
-msgstr ""
+msgstr "@section 一般的なキーワードアイテム"
 
 #: TITLES/src/customize.texi.pl:8
 msgid "@section Defining Customization Groups"
-msgstr ""
+msgstr "@section カスタマイゼーショングループの定義"
 
 #: TITLES/src/customize.texi.pl:9
 msgid "@section Defining Customization Variables"
-msgstr ""
+msgstr "@section カスタマイゼーション変数の定義"
 
 #: TITLES/src/customize.texi.pl:10
 msgid "@section Customization Types"
-msgstr ""
+msgstr "@section カスタマイゼーション型"
 
 #: TITLES/src/customize.texi.pl:11
 msgid "@subsection Simple Types"
-msgstr ""
+msgstr "@subsection 単純型"
 
 #: TITLES/src/customize.texi.pl:12
 msgid "@subsection Composite Types"
-msgstr ""
+msgstr "@subsection 複合型"
 
 #: TITLES/src/customize.texi.pl:13
 msgid "@subsection Splicing into Lists"
-msgstr ""
+msgstr "@subsection リストへのスプライス"
 
 #: TITLES/src/customize.texi.pl:14
 msgid "@subsection Type Keywords"
-msgstr ""
+msgstr "@subsection 型キーワード"
 
 #: TITLES/src/customize.texi.pl:15
 msgid "@subsection Defining New Types"
-msgstr ""
+msgstr "@subsection 新たな型の定義"
 
 #: TITLES/src/customize.texi.pl:16
 msgid "@section Applying Customizations"
-msgstr ""
+msgstr "@section カスタマイゼーションの適用"
 
 #: TITLES/src/customize.texi.pl:17
 msgid "@section Custom Themes"
-msgstr ""
+msgstr "@section Customテーマ"

@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-28 23:32+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-07-26 07:20+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,12 +18,12 @@ msgstr ""
 
 #: TITLES/src/records.texi.pl:6
 msgid "@chapter Records"
-msgstr ""
+msgstr "@chapter レコード"
 
 #: TITLES/src/records.texi.pl:7
 msgid "@section Record Functions"
-msgstr ""
+msgstr "@section レコード関数"
 
 #: TITLES/src/records.texi.pl:8
 msgid "@section Backward Compatibility"
-msgstr ""
+msgstr "@section 後方互換"

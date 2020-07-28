@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-28 23:32+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-07-28 21:23+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,85 +18,85 @@ msgstr ""
 
 #: TITLES/src/control.texi.pl:6
 msgid "@chapter Control Structures"
-msgstr ""
+msgstr "@chapter 制御構造"
 
 #: TITLES/src/control.texi.pl:7
 msgid "@section Sequencing"
-msgstr ""
+msgstr "@section 順序"
 
 #: TITLES/src/control.texi.pl:8
 msgid "@section Conditionals"
-msgstr ""
+msgstr "@section 条件"
 
 #: TITLES/src/control.texi.pl:9
 msgid "@section Constructs for Combining Conditions"
-msgstr ""
+msgstr "@section 組み合わせ条件の構築"
 
 #: TITLES/src/control.texi.pl:10
 msgid "@section Pattern-Matching Conditional"
-msgstr ""
+msgstr "@section パターンマッチングによる条件"
 
 #: TITLES/src/control.texi.pl:11
 #, perl-brace-format
 msgid "@subsection The @code{pcase} macro"
-msgstr ""
+msgstr "@subsection @code{pcase}マクロ"
 
 #: TITLES/src/control.texi.pl:12
 #, perl-brace-format
 msgid "@subsection Extending @code{pcase}"
-msgstr ""
+msgstr "@subsection @code{pcase}の拡張"
 
 #: TITLES/src/control.texi.pl:13
 msgid "@subsection Backquote-Style Patterns"
-msgstr ""
+msgstr "@subsection バッククォートスタイルパターン"
 
 #: TITLES/src/control.texi.pl:14
 #, perl-brace-format
 msgid "@subsection Destructuring with @code{pcase} Patterns"
-msgstr ""
+msgstr "@subsection @code{pcase}パターンによる分解"
 
 #: TITLES/src/control.texi.pl:15
 msgid "@section Iteration"
-msgstr ""
+msgstr "@section 繰り返し"
 
 #: TITLES/src/control.texi.pl:16
 msgid "@section Generators"
-msgstr ""
+msgstr "@section ジェネレーター"
 
 #: TITLES/src/control.texi.pl:17
 msgid "@section Nonlocal Exits"
-msgstr ""
+msgstr "@section 非ローカル脱出"
 
 #: TITLES/src/control.texi.pl:18
 #, perl-brace-format
 msgid "@subsection Explicit Nonlocal Exits: @code{catch} and @code{throw}"
-msgstr ""
+msgstr "@subsection 明示的な非ローカル脱出: @code{catch}と@code{throw}"
 
 #: TITLES/src/control.texi.pl:19
 #, perl-brace-format
 msgid "@subsection Examples of @code{catch} and @code{throw}"
-msgstr ""
+msgstr "@subsection @code{catch}と@code{throw}の例"
 
 #: TITLES/src/control.texi.pl:20
 msgid "@subsection Errors"
-msgstr ""
+msgstr "@subsection エラー"
 
 #: TITLES/src/control.texi.pl:21
 msgid "@subsubsection How to Signal an Error"
-msgstr ""
+msgstr "@subsubsection エラーをシグナルする方法"
 
 #: TITLES/src/control.texi.pl:22
 msgid "@subsubsection How Emacs Processes Errors"
-msgstr ""
+msgstr "@subsubsection Emacsがエラーを処理する方法"
 
 #: TITLES/src/control.texi.pl:23
 msgid "@subsubsection Writing Code to Handle Errors"
-msgstr ""
+msgstr "@subsubsection エラーを処理するコードの記述"
 
 #: TITLES/src/control.texi.pl:24
 msgid "@subsubsection Error Symbols and Condition Names"
-msgstr ""
+msgstr "@subsubsection エラーシンボルとエラー条件"
 
 #: TITLES/src/control.texi.pl:25
 msgid "@subsection Cleaning Up from Nonlocal Exits"
-msgstr ""
+msgstr "@subsection 非ローカル脱出のクリーンアップ"

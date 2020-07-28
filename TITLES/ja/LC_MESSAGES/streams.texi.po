@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-28 23:32+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-07-26 23:19+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,28 +18,28 @@ msgstr ""
 
 #: TITLES/src/streams.texi.pl:6
 msgid "@chapter Reading and Printing Lisp Objects"
-msgstr ""
+msgstr "@chapter Lispオブジェクトの読み取りとプリント"
 
 #: TITLES/src/streams.texi.pl:7
 msgid "@section Introduction to Reading and Printing"
-msgstr ""
+msgstr "@section 読み取りとプリントの概念"
 
 #: TITLES/src/streams.texi.pl:8
 msgid "@section Input Streams"
-msgstr ""
+msgstr "@section 入力ストリーム"
 
 #: TITLES/src/streams.texi.pl:9
 msgid "@section Input Functions"
-msgstr ""
+msgstr "@section 入力関数"
 
 #: TITLES/src/streams.texi.pl:10
 msgid "@section Output Streams"
-msgstr ""
+msgstr "@section 出力ストリーム"
 
 #: TITLES/src/streams.texi.pl:11
 msgid "@section Output Functions"
-msgstr ""
+msgstr "@section 出力関数"
 
 #: TITLES/src/streams.texi.pl:12
 msgid "@section Variables Affecting Output"
-msgstr ""
+msgstr "@section 出力に影響する変数"
