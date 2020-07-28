@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-28 23:32+0900\n"
-"PO-Revision-Date: 2020-07-26 21:37+0900\n"
+"PO-Revision-Date: 2020-07-29 03:13+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -42,9 +42,8 @@ msgid "@section Autoload"
 msgstr "@section autoload"
 
 #: TITLES/src/loading.texi.pl:12
-#, fuzzy
 msgid "@subsection Autoload by Prefix"
-msgstr "@section autoload"
+msgstr "@subsection プレフィックスによるautoload"
 
 #: TITLES/src/loading.texi.pl:13
 msgid "@subsection When to Use Autoload"
